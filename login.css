@@ -1,0 +1,246 @@
+:root{
+    --white-color:hsl(0,0%,100%);
+    --black-color:hsl(0,0%,0%);
+    --h1-font-size:1.75rem;
+    --body-font:"Poppins",sans-serif;
+    --normal-font-size:1rem;
+    --small-font-size:.873rem;
+    --font-medium:500;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+
+}
+body,
+input,
+button{
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+}
+body{
+    color:var(--white-color);
+}
+input,
+button
+{
+    border:none;
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/**login*/
+
+.login{
+    position:relative;
+    height: 100vh;
+    display:grid;
+    align-items: center;
+}
+.login__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.login_form{
+    position:relative;
+    background-color: hsla(0, 0%, 10%,.1);
+    border:2px solid var(--white-color);
+    margin-inline: 30rem;
+    padding:2.5rem 1.5rem;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(6px);
+}
+.login_title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+    margin:2rem;
+    font-family: nv boil;
+}
+.login_content,
+.login_box{
+    display: grid;
+}
+.login_content{
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.login_box{
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid var(--white-color);
+}
+.fa-solid{
+    font-size: 1.25rem;
+   
+}
+.login_box_input{
+    position: relative;
+}
+.login_input{
+    width:100%;
+    padding-block: .8rem;
+    background: none;
+    color:var(--white-color);
+    position: relative;
+    z-index: 1;
+}
+.login_label{
+    position:absolute;
+    left:0;
+    top:13px;
+    font-family: nv boil;
+    font-weight: var(--white-color);
+    transition: top .3s, font-size .3s;
+    
+}
+.login_check,
+.login_check_group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--small-font-size);
+}
+.login_check{
+    margin-bottom: 1.5rem;
+}
+.login_check_group{
+    column-gap: .5rem;
+}
+.login_check_input{
+    width:16px;
+    height: 16px;
+}
+.login_forget{
+    color:var(--white-color);
+}
+.login_forget:hover{
+    text-decoration: underline;
+}
+.login_button{
+    width:100%;
+    padding:1rem;
+    border-radius: 1rem;
+    background-color: var(--white-color);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.login_input:focus +.login_label{
+    top:-12px;
+    font-size: var(--small-font-size);
+}
+.login_register{
+    text-align: center; 
+}
+.login_register a{
+    color:var(--white-color);
+    font-size: var(--normal-font-size);
+}
+.login_register a:hover{
+    text-decoration: underline;
+}
+.login_input:not(:placeholder-shown).login_input:not(:focus) +.login_label{
+    top:-12px;
+    font-size: var(--small-font-size);
+}
+/*register*/
+.register{
+    position:relative;
+    height: 100vh;
+    display:grid;
+    align-items: center;
+}
+.register_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.register_form{
+    position:relative;
+    background-color: hsla(0, 0%, 10%,.1);
+    border:2px solid var(--white-color);
+    margin-inline: 30rem;
+    padding:2.5rem 1.5rem;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(6px);
+    top:20px;
+    width: 100%;
+}
+.register_title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+    margin:1rem;
+    font-family: nv boil;
+ 
+}
+
+.register_content,
+.register_box{
+    display: grid;
+}
+.register_content{
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.register_box{
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid var(--white-color);
+}
+.fa-solid{
+    margin-top: 10px;
+    font-size: 1.25rem;  
+    margin-bottom: 0px;
+}
+.register_box_input{
+    position: relative;
+}
+.register_input{
+    width:100%;
+    padding-block: .8rem;
+    background: none;
+    color:var(--white-color);
+    position: relative;
+    z-index: 1;
+}
+.register_label{
+    position:absolute;
+    left:0;
+    top:13px;
+    font-family: nv boil;
+    font-weight: var(--white-color);
+    transition: top .3s, font-size .3s;
+}
+.register_button{
+    width:100%;
+    padding:1rem;
+    border-radius: 1rem;
+    background-color: var(--white-color);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.register_input:focus +.register_label{
+    top:-12px;
+    font-size: var(--small-font-size);
+}
+.register_input:not(:placeholder-shown).register_input:not(:focus) +.register_label{
+    top:-12px;
+    font-size: var(--small-font-size);
+}

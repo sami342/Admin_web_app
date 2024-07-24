@@ -1,0 +1,414 @@
+:root{
+    --blue:#2a2185;
+    --white:#fff;
+    --gray:#f5f5f5;
+    --black:#222;
+    --black2:#999;
+}
+
+*{
+    font-family: uv boil;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+body{
+    min-height:100vh;
+    overflow-x: hidden;
+}
+.container{
+    position:relative;
+    width:100%;
+}
+/****************main*****************************/
+header{
+    display:flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background:white;
+    top: 0;
+    left:0;
+    right:0;
+    z-index: 100;
+}
+header .menu{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: #c72092;
+    font-style: normal;
+    margin:5px 0px;
+    padding:10px 10px;
+    
+}
+header .menu span{
+    text-decoration: underline;
+    margin: 0px 5px;
+    color: #6c14d0;
+}
+header .title{
+    text-transform: capitalize;
+    font-size: 20px;
+}
+header .icons{
+    position: relative;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    font-size:25px;
+    margin-right: 10px;
+    color:#6c14d0;
+    
+}
+header .icons i{
+    margin:10px 10px;
+    padding:0px 10px;
+    cursor:pointer;
+   
+}
+header .mobile{
+    display:none;
+    align-items: center;
+}
+/*************schedule details***************************/
+
+.details{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding:50px 20px;
+    margin:10px 10px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap:30px 0px;
+}
+.details .scheuledetails{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    width:98%;
+    height:100%; 
+    padding: 10px 10px;
+    border-radius: 10px;
+
+}
+.details .cardheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardheader h2{
+    font-weight: 600;
+    color: var(--blue);
+}
+.cardheader .DeparturePlace{
+    width:100px;
+    height:30px;  
+    border-radius: 6px;
+    border-color: rgb(126, 213, 213);
+    font-size:20px;
+}
+.month{
+    width:150px;
+    position:relative;
+    padding:5px 10px;
+    background:#aa84d5;
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+    border-color:rgb(126, 213, 213); 
+}
+
+.details .scheuledetails table{
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.details .scheuledetails table tr th{
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);
+}
+.details .scheuledetails table tr td{
+    padding:5px 30px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);
+}
+.details .scheuledetails button{
+    margin: 10px 30px;
+}
+
+.btn{
+    width:120px;
+    position:relative;
+    padding:5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+    margin:5px 30px;
+   
+}
+
+.popup{
+    background: rgb(0, 0,0, 0.7);
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+.popup_content{
+    background:url('image/image6.jpg');
+    height:400px;
+    width:500px;
+    background:#fff;
+    padding:10px;
+    border-radius: 5px;
+    margin-top:70px;
+}  
+/****************insert*******************************/
+.popup_main{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+.popup_title{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.popup_title i{
+   margin-left:50px;
+   position: relative;
+   top:1px;
+   left:100px;
+   font-size:30px;
+}
+.popup_title i:hover{
+    color: #ff0000;
+}
+
+.popup_content form label{
+    padding:70px 10px;
+    margin:90px 3px;
+    font-size: 20px;
+}
+.popup_content form p{
+    padding: 10px 30px;
+}
+.popup_content form label input{
+    margin:10px 10px;
+    width:210px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: #6c14d0;
+}
+/*****************update******************************/
+.popupupdate{
+    background: rgb(0, 0,0, 0.7);
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupcontentupdate{
+    height:250px;
+    width:450px;
+    background:#fff;
+    padding:10px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top:70px;
+}
+
+.popupcontentupdate i{
+    margin-left:50px;
+    position: relative;
+    top:1px;
+    left:80px;
+    font-size:30px;
+}
+.popupcontentupdate p{
+    margin:20px;
+}
+.popupcontentupdate .DeparturePlace{
+    
+    width:150px; 
+    height:30px; 
+    border-radius: 6px; 
+    border-color: rgb(126, 213, 213);
+    font-size:20px;
+
+}
+.popupcontentupdate .chooseoption{
+    width:150px; 
+    height:30px; 
+    border-radius: 6px; 
+    border-color: rgb(126, 213, 213);
+    font-size:20px;
+    margin-left: 320px;
+
+}
+.popupcontentupdate form label input{
+    margin:10px 10px;
+    width:190px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: #6c14d0;
+}
+/*************update indvidual*******/
+
+.update{
+    background: rgb(0, 0,0, 0.7);
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    display:flex;
+    margin:2px;
+
+}
+.contentupdate{
+    height:400px;
+    width:500px;
+    background:#fff;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin:90px auto;
+}
+.contentupdate i{
+    margin-left:50px;
+    position: relative;
+    top:1px;
+   left:-150px;
+    font-size:30px;
+}
+.contentupdate form p input{
+    margin:10px 10px;
+    width:190px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: #6c14d0;
+}
+
+.contentupdate form p select{
+    margin:10px 10px;
+    width:190px;
+}
+
+
+/****************delete**************************/
+.popupdelete{
+    background: rgb(0, 0,0, 0.7);
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0.4s);
+}
+.popupcontentdelete{
+    height:300px;
+    width:500px;
+    background:#fff;
+    padding:10px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top:200px;
+}
+.popupcontentdelete .chooseoption{
+    width:100px; 
+    height:30px; 
+    border-radius: 6px; 
+    border-color: rgb(126, 213, 213);
+    font-size:20px;
+    margin-left: 210px;
+}
+.popupcontentdelete form p{
+    margin:30px 5px;
+}
+/******************passsenger******************************/
+.cardheader .search i{
+    margin:0px 10px;
+    font-size: 18px;
+}
+.cardheader .search input{
+    width:220px;
+    height:30px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding:10px 20px;
+}
+.cardheader .search i:hover{
+    color:var(--blue);
+}
+/*****************Report*************************************/
+.report_title{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top:35px;
+    padding:40px 20px;
+    margin:10px 10px;
+    display:grid;
+    grid-template-columns: 1fr;
+}
+.report_title .report_title_detail{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    width:99%;
+    height:100%; 
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.report_title .cardheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.report{
+    top:3px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0px 50px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    grid-gap:40px 0px;
+}
+.report .reportdetails{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    width:170px;
+    height:100px; 
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin:10px 0px;
+    font-size: 20px;
+}
+.report .reportdetails:hover{
+    color:var(--white);
+    background: var(--blue);
+}
+.report .reportdetails:hover i{
+    color:var(--white);
+}
+.report .cardheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardheader strong{
+    padding:50px 10px;
+    font-size: 30px;
+}

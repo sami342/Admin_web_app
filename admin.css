@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;  
+    text-transform:capitalize;
+}
+html{
+    font-size:62%;
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+
+}
+.siedbar{
+    width:10px;
+    height: 650px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    padding: 80px 0 0 15px;
+    padding-right: 260px;
+    transition: 0.3s;
+    background-color:#f0f8ff;
+}
+.siedbar .siedbar_header{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  flex-direction: column;
+  top: 20px;
+  padding-left: 5px;
+}
+.siedbar .siedbar_header h3 i{
+    height: 70px;
+    width: 70px;
+    object-fit:center;
+    object-position:center;
+    font-size: 50px;
+    color:#033662;
+}
+.siedbar .siedbar_header p{
+    display: flex;
+    font-size: 30px;
+    font-family: nv boil;
+}
+.siedbar .siedbar_header p span{
+    color:#033662;
+}
+.siedbar .list_elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: normal;
+    padding:90px;
+    margin: 20px;
+    
+}
+.siedbar .list_elements a li i{
+    padding:25px;
+ 
+}
